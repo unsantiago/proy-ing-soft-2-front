@@ -8,8 +8,8 @@ export const routes: Routes = [
         canActivate: [loggedGuard]
     },
     {
-        path: 'articles',
-        loadChildren: () => import('./articles/articles.routes').then(m => m.ARTICLES_ROUTES)
+        path: 'houses',
+        loadChildren: () => import('./houses/houses.routes').then(m => m.HOUSES_ROUTES)
     },
     {
         path: 'dashboard',
