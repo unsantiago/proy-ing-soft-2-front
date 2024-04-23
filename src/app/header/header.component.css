@@ -1,0 +1,22 @@
+/* header.component.css */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: 0; /* Asegurar que esté alineado a la izquierda */
+    text-align: center; /* Centrar el contenido horizontalmente */
+  }  
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
