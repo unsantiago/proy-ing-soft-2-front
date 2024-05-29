@@ -1,4 +1,5 @@
 <main>
+  <a [routerLink]="['/']">
   <header class="navbar navbar-expand-lg navbar-light bg-light py-1">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -11,8 +12,9 @@
       </div>
     </div>
   </header>
+  </a>
   <section class="content">
-    <app-home></app-home>
+    <router-outlet></router-outlet>
   </section>
 </main>
 
