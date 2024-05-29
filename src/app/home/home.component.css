@@ -10,7 +10,7 @@
   .search-bar form {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
 
   .input-group {
@@ -47,6 +47,16 @@
 
   button:hover {
     background: #e5e5e5;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  app-housing-location {
+    margin-bottom: 10px;
   }
   
   /* Responsiveness */
