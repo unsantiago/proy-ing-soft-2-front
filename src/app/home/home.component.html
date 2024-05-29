@@ -1,0 +1,30 @@
+<section class="search-bar">
+  <form>
+    <div class="input-group">
+      <label for="destination">¿Dónde quieres ir?</label>
+      <input id="destination" type="text" placeholder="Medellín, Colombia" />
+    </div>
+    <div class="input-group">
+      <label for="arrival">Llegada</label>
+      <input id="arrival" type="date" />
+    </div>
+    <div class="input-group">
+      <label for="departure">Salida</label>
+      <input id="departure" type="date" />
+    </div>
+    <div class="input-group">
+      <label for="people">¿Quiénes?</label>
+      <input id="people" type="text" placeholder="Número de personas" />
+    </div>
+    <div class="button-container">
+      <button type="button" class="btn btn-light">Buscar</button>
+    </div>
+  </form>
+</section>
+<section class="results">
+  <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+</section>
+
+  
+  
+  
