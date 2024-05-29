@@ -1,7 +1,18 @@
-<app-header></app-header>
-<app-nav-bar></app-nav-bar>
-
-<h1>Cabecera principal</h1>
-<router-outlet></router-outlet>
-
+<main>
+  <header class="navbar navbar-expand-lg navbar-light bg-light py-1">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img class="brand-logo me-1" src="assets/logo.png" alt="logo" aria-hidden="true" />
+        <img class="brand-title" src="assets/logomikazab.png" alt="Mikaza" />
+      </a>
+      <div class="d-flex ms-auto">
+        <button type="button" class="btn btn-info me-2">Iniciar Sesión</button>
+        <button type="button" class="btn btn-info">Registrarse</button>
+      </div>
+    </div>
+  </header>
+  <section class="content">
+    <app-home></app-home>
+  </section>
+</main>
 

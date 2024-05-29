@@ -1,10 +1,63 @@
-/* home.component.css */
-.container {
-  margin-top: 20px;
-}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0196b4;
+    border-radius: 200px;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-.card {
-  margin-bottom: 20px;
-}
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: 400;
+    color: aliceblue;
+  }
+  
+  input[type="text"], input[type="date"] {
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  input[type="text"] {
+    width: 200px;
+  }
+  
+  input[type="date"] {
+    width: 150px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Ajuste del margen superior del botón */
+  }
 
+  button:hover {
+    background: #e5e5e5;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .search-bar form {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    input[type="text"], input[type="date"], button {
+      width: 100%;
+    }
+  }
   
