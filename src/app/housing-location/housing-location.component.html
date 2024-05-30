@@ -1,0 +1,14 @@
+<section class="listing">
+  <img
+    class="listing-photo"
+    [src]="housingLocation.imagen"
+    alt="Exterior photo of {{ housingLocation.nombre }}"
+    crossorigin
+  />
+  <h4 class="listing-heading">{{ housingLocation.nombre }}</h4>
+  <h6 class="listing-location">    {{ housingLocation.ciudad }}, Colombia</h6>
+  <h6 class="listing-nroHabs">    Habitaciones: {{ housingLocation.nroHabitaciones }}</h6>
+  <h6 class="listing-capMax">    Capacidad máxima: {{ housingLocation.capacidad_Max }} personas</h6>
+  <h5 class="listing-price"><strong>    {{ housingLocation.precioNoche }} COP</strong> <h6 class="listing-price-subtext">    por noche</h6></h5>
+  <a [routerLink]="['/details', housingLocation.idInmueble]"><strong>Ver más</strong></a>
+</section>

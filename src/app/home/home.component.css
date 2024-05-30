@@ -1,0 +1,94 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0196b4;
+    border-radius: 200px;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar form {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: 400;
+    color: aliceblue;
+  }
+  
+  input[type="text"], input[type="date"] {
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  input[type="text"] {
+    width: 200px;
+  }
+  
+  input[type="date"] {
+    width: 150px;
+  }
+  
+  .button-container1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Ajuste del margen superior del botón */
+  }
+
+  button:hover {
+    background: #e5e5e5;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  app-housing-location {
+    margin-bottom: 1px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0196b4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-container button:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .search-bar form {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    input[type="text"], input[type="date"], button {
+      width: 100%;
+    }
+  }
+  

@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import {RouterModule} from '@angular/router';
+import {HomeComponent} from './home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavBarComponent, FooterComponent],
+  imports: [RouterOutlet, HomeComponent, RouterLink, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'AngularArquitectura';
+  title = 'mikaza';
 }

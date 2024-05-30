@@ -1,0 +1,161 @@
+article {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.listing-heading {
+  font-size: 48pt;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.secondary-photos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.secondary-photo {
+  width: 23%;
+  height: 100px;
+  background-color: #8a3f3f; /* Placeholder color */
+  border: 1px solid #010101;
+  border-radius: 5px;
+}
+
+.details-container,
+.host-info,
+.description-container,
+.reservation-container {
+  margin-bottom: 20px;
+}
+
+.listing-location,
+.listing-capacity {
+  font-size: 20pt;
+  margin-bottom: 15px;
+}
+
+hr {
+  border: none;
+  border-top: 3px solid #000000;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.host-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.host-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.host-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.price {
+  font-size: 24pt;
+  font-weight: 600;
+  color: #000;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.description-container {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.description-container h3 {
+  font-size: 24pt;
+  margin-bottom: 10px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+}
+
+.service-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.reservation-container {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.dates,
+.guests {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reserve-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #0196b4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16pt;
+  cursor: pointer;
+  text-align: center;
+}
+
+.price-calculation {
+  margin-top: 20px;
+  font-size: 18pt;
+  text-align: center;
+}
+
