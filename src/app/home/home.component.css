@@ -10,7 +10,7 @@
   .search-bar form {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 30px; /* Mantienes el gap de 30px de develop */
   }
 
   .input-group {
@@ -79,7 +79,7 @@
   .button-container button:hover {
     background-color: var(--accent-color);
   }
-  
+
   /* Responsiveness */
   @media (max-width: 768px) {
     .search-bar form {
@@ -91,4 +91,5 @@
       width: 100%;
     }
   }
+
   

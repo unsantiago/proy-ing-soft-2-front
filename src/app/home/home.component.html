@@ -2,7 +2,7 @@
   <form>
     <div class="input-group">
       <label for="destination">¿Dónde quieres ir?</label>
-      <input id="destination" type="text" placeholder="Medellín, Colombia" #filter />
+      <input id="destination" type="text" placeholder="Medellín, Colombia" />
     </div>
     <div class="input-group">
       <label for="arrival">Llegada</label>
@@ -17,21 +17,18 @@
       <input id="people" type="text" placeholder="Número de personas" />
     </div>
     <div class="button-container1">
-      <button type="button" class="btn btn-light" (click)="filterResults(filter.value)">Buscar</button>
+      <button type="button" class="btn btn-light">Buscar</button>
     </div>
   </form>
 </section>
 <section class="results">
   <app-housing-location
-  *ngFor="let housingLocation of filteredLocationList"
-  [housingLocation]="housingLocation"
+    *ngFor="let housingLocation of filteredLocationList"
+    [housingLocation]="housingLocation"
   ></app-housing-location>
 </section>
 <div class="button-container">
   <button type="button" class="btn btn-light">1</button>
   <button type="button" class="btn btn-light">2</button>
 </div>
-  
-  
-  
-    
+
