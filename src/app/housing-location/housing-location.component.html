@@ -1,11 +1,12 @@
 <section class="listing">
   <img
     class="listing-photo"
-    [src]="housingLocation.photo"
-    alt="Exterior photo of {{ housingLocation.name }}"
+    [src]="housingLocation.imagen"
+    alt="Exterior photo of {{ housingLocation.nombre }}"
     crossorigin
   />
-  <h4 class="listing-heading">{{ housingLocation.name }}</h4>
-  <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
-  <a [routerLink]="['/details', housingLocation.id]">Ver más</a>
+  <h4 class="listing-heading">{{ housingLocation.nombre }}</h4>
+  <p class="listing-location">{{ housingLocation.ciudad }}, Colombia</p>
+  <p class="listing-nroHabs">Habitaciones: {{ housingLocation.nroHabitaciones }}</p>
+  <a [routerLink]="['/details', housingLocation.idInmueble]">Ver más</a>
 </section>
