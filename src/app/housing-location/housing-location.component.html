@@ -1,10 +1,14 @@
 <section class="listing">
-    <img
-      class="listing-photo"
-      [src]="'https://a0.muscache.com/im/pictures/miso/Hosting-664515752504034383/original/2da4fac5-aa35-46c3-82d1-c9ad41420646.jpeg?im_w=1200'"
-      alt="Exterior photo of {{ housingLocation.name }}"
-      crossorigin
-    />
-    <h2 class="listing-heading">{{ housingLocation.name }}</h2>
-    <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
-  </section>
+  <img
+    class="listing-photo"
+    [src]="housingLocation.imagen"
+    alt="Exterior photo of {{ housingLocation.nombre }}"
+    crossorigin
+  />
+  <h4 class="listing-heading">{{ housingLocation.nombre }}</h4>
+  <h6 class="listing-location">    {{ housingLocation.ciudad }}, Colombia</h6>
+  <h6 class="listing-nroHabs">    Habitaciones: {{ housingLocation.nroHabitaciones }}</h6>
+  <h6 class="listing-capMax">    Capacidad máxima: {{ housingLocation.capacidad_Max }} personas</h6>
+  <h5 class="listing-price"><strong>    {{ housingLocation.precioNoche }} COP</strong> <h6 class="listing-price-subtext">    por noche</h6></h5>
+  <a [routerLink]="['/details', housingLocation.idInmueble]"><strong>Ver más</strong></a>
+</section>

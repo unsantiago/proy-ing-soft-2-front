@@ -1,10 +1,14 @@
 export interface HousingLocation {
-    id: number;
-    name: string;
-    city: string;
-    state: string;
-    photo: string;
-    availableUnits: number;
-    wifi: boolean;
-    laundry: boolean;
-  }
+  idInmueble: number;
+  nombre: string;
+  tipo: string;
+  descripcion: string;
+  imagen: string;
+  direccion: string;
+  precioNoche: number;
+  nroHabitaciones: number;
+  capacidad_Max: number;
+  serviciosAdicionales: string[];
+  ciudad: string;
+  idAnfitrion: number;
+}
