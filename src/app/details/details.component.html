@@ -1,23 +1,61 @@
-<article>
+<article #detailsPage>
+  <h2 class="listing-heading">{{ housingLocation?.nombre }}</h2>
+  <div class="photo-container">
     <img
-      class="listing-photo"
+      class="main-photo"
       [src]="housingLocation?.imagen"
       alt="Exterior photo of {{ housingLocation?.nombre }}"
       crossorigin
     />
-    <section class="listing-description">
-      <h2 class="listing-heading">{{ housingLocation?.nombre }}</h2>
-      <p class="listing-location">{{ housingLocation?.ciudad }}, "Colombia"</p>
-      <p class="listing-location">{{ housingLocation?.tipo }}</p>
-      <p class="listing-location">{{ housingLocation?.descripcion }}</p>
-    </section>
-    <section class="listing-features">
-      <h2 class="section-heading">Acerca del inmueble</h2>
-      <ul>
-        <li>Precio por noche {{ housingLocation?.precioNoche }}</li>
-        <li>Número de habitaciones: {{ housingLocation?.nroHabitaciones }}</li>
-        <li>Capacidad de personas máxima: {{ housingLocation?.capacidad_Max }}</li>
-        <li>Servicios adicionales: {{ housingLocation?.serviciosAdicionales }}</li>
-      </ul>
-    </section>
-  </article>
+    <div class="secondary-photos">
+      <div *ngFor="let foto of placeholders" class="secondary-photo placeholder"></div>
+    </div>
+  </div>
+  <div class="details-container">
+    <h5 class="listing-location">{{ housingLocation?.tipo }} en {{ housingLocation?.ciudad }}, Colombia</h5>
+    <h6 class="listing-capacity">
+      {{ housingLocation?.capacidad_Max }} huéspedes - {{ housingLocation?.nroHabitaciones }} {{ habitacionesTexto }}
+    </h6>      
+  </div>
+  <hr>
+  <div class="host-info">
+    <img class="host-photo" [src]="'/assets/host.jpg'" alt="Host photo">
+    <div class="host-details">
+      <p>Andrea Sánchez</p>
+      <p>5 años siendo anfitrión | <strong>Superanfitrión</strong></p>
+      <p>Puntuación: 4.95</p>
+    </div>
+    <p class="price"><strong>${{ housingLocation?.precioNoche }} COP</strong> / noche</p>
+  </div>
+  <hr>
+  <div class="main-content">
+    <div class="description-container">
+      <h3>Descripción del inmueble</h3>
+      <p>{{ housingLocation?.descripcion }}</p>
+      <h3>Servicios adicionales</h3>
+      <div class="services-container">
+        <div *ngFor="let servicio of housingLocation?.serviciosAdicionales" class="service-item">
+          <img [src]="getServiceIcon(servicio)" alt="{{ servicio }} icon">
+          <p>{{ servicio }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="reservation-container">
+      <div class="dates">
+        <label for="checkin">Fecha de llegada:</label>
+        <input type="date" id="checkin">
+        <label for="checkout">Fecha de salida:</label>
+        <input type="date" id="checkout">
+      </div>
+      <div class="guests">
+        <label for="guests">Cantidad de huéspedes:</label>
+        <input type="number" id="guests" min="1" max="{{ housingLocation?.capacidad_Max }}">
+      </div>
+      <button class="reserve-button">Reservar</button>
+      <div class="price-calculation">
+        <p>Total: ${{ housingLocation?.precioNoche }}</p>
+      </div>
+    </div>
+  </div>
+</article>
+
